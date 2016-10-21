@@ -8,9 +8,7 @@
 
 #import "UIButton+ShowBadge.h"
 #import <objc/runtime.h>
-
-#define GlobalwhiteColor [UIColor whiteColor]
-#define GlobalredColor [UIColor colorWithRGBString:@"#e64c65"]
+#import "UIView+RFAnimate.h"
 
 static char * ShowBadgeButton = "ShowBadgeButton";
 
@@ -84,9 +82,9 @@ static char * ShowBadgeButton = "ShowBadgeButton";
     label.frame = frame;
     label.text = self.badge;
     label.layer.cornerRadius = 6;
-    label.backgroundColor = GlobalredColor;
-    label.textColor = GlobalwhiteColor;
-    label.font = GlobalSystemFontWithSize(8);
+    label.backgroundColor = [UIColor redColor];
+    label.textColor = [UIColor whiteColor];
+    label.font = [UIFont systemFontOfSize:8];
     label.clipsToBounds = YES;
     label.textAlignment = NSTextAlignmentCenter;
     [view addSubview:label];

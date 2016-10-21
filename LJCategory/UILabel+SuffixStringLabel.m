@@ -11,14 +11,14 @@
 @implementation UILabel (SuffixStringLabel)
 -(void)setString:(NSString *)string prefixFont:(UIFont *)prefixfont sufString:(NSString *)sufstring suffixFont:(UIFont *)sufffont
 {
-    [self setString:string fontSize:0 sufString:sufstring fontSize:0 color:GlobalwhiteColor prefixfont:prefixfont suffixFont:sufffont];
+    [self setString:string fontSize:0 sufString:sufstring fontSize:0 color:[UIColor whiteColor] prefixfont:prefixfont suffixFont:sufffont];
 }
 
 
 
 -(void)setString:(NSString *)string fontSize:(CGFloat)size sufString:(NSString *)sufstring fontSize:(CGFloat)sufsize
 {
-    [self setString:string fontSize:size sufString:sufstring fontSize:sufsize color:GlobalwhiteColor];
+    [self setString:string fontSize:size sufString:sufstring fontSize:sufsize color:[UIColor whiteColor]];
 }
 
 -(void)setString:(NSString *)string sufString:(NSString *)sufstring
@@ -45,9 +45,10 @@
     NSInteger suffLeng = sufstring.length;
     
     if (!pfont) {
-        [attString addAttribute:NSFontAttributeName value:GlobalSystemFontWithSize(size) range:NSMakeRange(0, prefixLeng)];
+        [attString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:size]
+ range:NSMakeRange(0, prefixLeng)];
         
-        [attString addAttribute:NSFontAttributeName value:GlobalSystemFontWithSize(sufsize) range:NSMakeRange(prefixLeng, suffLeng)];
+        [attString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:sufsize] range:NSMakeRange(prefixLeng, suffLeng)];
 
     }else
     {

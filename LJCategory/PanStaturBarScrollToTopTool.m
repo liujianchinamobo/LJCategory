@@ -7,6 +7,7 @@
 //
 
 #import "PanStaturBarScrollToTopTool.h"
+#import <UIKit/UIKit.h>
 
 @implementation PanStaturBarScrollToTopTool
 
