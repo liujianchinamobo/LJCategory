@@ -8,6 +8,10 @@
 
 #import "UIButton+ShowBadge.h"
 #import <objc/runtime.h>
+
+#define GlobalwhiteColor [UIColor whiteColor]
+#define GlobalredColor [UIColor colorWithRGBString:@"#e64c65"]
+
 static char * ShowBadgeButton = "ShowBadgeButton";
 
 @implementation BadgeLabel
