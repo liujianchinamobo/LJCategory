@@ -11,10 +11,6 @@
 #import <sys/utsname.h>
 
 @implementation NSObject (Liujian)
--(void)addMethodAfterReceiveAppLanguageChanged
-{
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeAppLanguage) name:AppLanguageChangedNotification object:nil];
-}
 
 //获得设备型号
 - (NSString *)getCurrentDeviceModel

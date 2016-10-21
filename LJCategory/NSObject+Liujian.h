@@ -16,8 +16,4 @@
  */
 - (NSString *)getCurrentDeviceModel;
 
-/**
- *  changeAppLanguage 方法
- */
--(void)addMethodAfterReceiveAppLanguageChanged;
 @end
